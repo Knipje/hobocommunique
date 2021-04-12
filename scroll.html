@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <style>
+
+            img{
+                position: absolute;
+            }
+
+            body{
+                background: rgba(0,0,0,0)
+            }
+            
+            #on, #message, #incoming{
+                display: none;
+            }
+
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+
+            $(document).ready(function(){
+                console.log('Ready')
+                $('#off').show()
+                $('#on').hide().delay(5000).show(1)
+                $('#incoming').hide().delay(7000).show(1).delay(4000).hide(1)
+                $('#message').hide().delay(11000).show(1)
+            });
+
+        </script>
+    </head>
+    <body>
+        <div style="display:flex;justify-content:center;align-items:center;width:100%;height:100%;">
+            <img src="tabletoff.png" height='100%' id='off'/>
+            <img src="tableton.png" height='100%' id='on'/>
+            <img src="message.png" height='100%' id='message'/>
+            <img src="incoming.png" height='100%' id='incoming'/>
+        </div>
+    </body>
+</html>
